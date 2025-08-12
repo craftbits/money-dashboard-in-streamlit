@@ -155,3 +155,7 @@ data/processed/notes/
 
 # Keep the list files in data root (these are configuration files)
 !data/list-*.csv
+
+# Authentication files - keep these for user management
+!data/users.json
+!data/sessions.json

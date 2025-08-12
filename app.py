@@ -15,6 +15,7 @@ import streamlit as st
 
 import config
 import utils
+import auth
 from modules import (
     home,
     profit_loss,
@@ -97,10 +98,6 @@ def create_sidebar_navigation() -> str:
                     if st.button(f"• {page_name}", key=f"nav_{page_name}"):
                         st.session_state.current_page = page_name
                         selected_page = page_name
-    # User info
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("**👤 Logged in as**")
-    st.sidebar.markdown(f"`{config.config.default_user}`")
     return selected_page
 
 
@@ -124,6 +121,14 @@ def main() -> None:
         unsafe_allow_html=True,
     )
     utils.apply_custom_css()
+    
+    # Check authentication first
+    if not auth.main_auth():
+        return  # Stop here if not authenticated
+    
+    # Show user menu in sidebar
+    auth.show_user_menu()
+    
     selected_page = create_sidebar_navigation()
     if selected_page:
         st.session_state.current_page = selected_page
