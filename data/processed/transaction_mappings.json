@@ -1,0 +1,103 @@
+{
+  "mappings": {
+    "GROCERY STORE": {
+      "account_type": "expense",
+      "category1": "Food & Dining",
+      "category2": "Groceries",
+      "category3": "Daily Groceries",
+      "tags": ["essential", "monthly"],
+      "payer": "Self",
+      "payee": "Grocery Store"
+    },
+    "GAS STATION": {
+      "account_type": "expense",
+      "category1": "Transportation",
+      "category2": "Fuel",
+      "category3": "Gasoline",
+      "tags": ["essential", "monthly"],
+      "payer": "Self",
+      "payee": "Gas Station"
+    },
+    "NETFLIX": {
+      "account_type": "expense",
+      "category1": "Entertainment",
+      "category2": "Streaming",
+      "category3": "Video Streaming",
+      "tags": ["subscription", "monthly", "luxury"],
+      "payer": "Self",
+      "payee": "Netflix"
+    },
+    "RESTAURANT": {
+      "account_type": "expense",
+      "category1": "Food & Dining",
+      "category2": "Dining Out",
+      "category3": "Restaurant",
+      "tags": ["luxury"],
+      "payer": "Self",
+      "payee": "Restaurant"
+    },
+    "SALARY DEPOSIT": {
+      "account_type": "income",
+      "category1": "Income",
+      "category2": "Salary",
+      "category3": "Employment",
+      "tags": ["monthly", "recurring"],
+      "payer": "Employer",
+      "payee": "Self"
+    },
+    "UTILITY BILL": {
+      "account_type": "expense",
+      "category1": "Utilities",
+      "category2": "Electricity",
+      "category3": "Power",
+      "tags": ["essential", "monthly"],
+      "payer": "Self",
+      "payee": "Utility Company"
+    }
+  },
+  "lists": {
+    "account_types": ["income", "expense", "transfer", "investment", "loan"],
+    "categories": [
+      "Food & Dining",
+      "Transportation", 
+      "Entertainment",
+      "Utilities",
+      "Healthcare",
+      "Shopping",
+      "Education",
+      "Travel",
+      "Insurance",
+      "Taxes",
+      "Investments",
+      "Gifts",
+      "Charity",
+      "Income"
+    ],
+    "tags": [
+      "essential",
+      "luxury",
+      "monthly",
+      "annual",
+      "subscription",
+      "one-time",
+      "recurring",
+      "business",
+      "personal",
+      "emergency"
+    ],
+    "payers": ["Self", "Employer", "Bank", "Investment", "Government", "Insurance"],
+    "payees": [
+      "Grocery Store",
+      "Gas Station",
+      "Restaurant",
+      "Utility Company",
+      "Internet Provider",
+      "Phone Company",
+      "Insurance Company",
+      "Healthcare Provider",
+      "Retail Store",
+      "Online Service",
+      "Netflix"
+    ]
+  }
+}

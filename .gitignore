@@ -141,11 +141,17 @@ dmypy.json
 .DS_Store
 Thumbs.db
 
-# Data files (optional - remove if you want to include sample data)
+# Data files - ignore raw transaction files and processed files except sample data
 data/raw/
+data/raw-transactions/
 data/processed/*.csv
 data/processed/*.xlsx
 data/processed/*.json
+data/processed/notes/
 
 # Keep the enhanced sample data for demo
 !data/processed/transactions_combined_enhanced.csv
+!data/processed/transaction_mappings.json
+
+# Keep the list files in data root (these are configuration files)
+!data/list-*.csv
