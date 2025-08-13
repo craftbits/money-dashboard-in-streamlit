@@ -31,11 +31,11 @@ class AuthManager:
         # Create users file if it doesn't exist
         if not os.path.exists(self.users_file):
             default_users = {
-                "admin": {
-                    "password_hash": self._hash_password("admin123"),
-                    "email": "admin@example.com",
+                "user1": {
+                    "password_hash": self._hash_password("test1pw"),
+                    "email": "user1@example.com",
                     "created_at": datetime.now().isoformat(),
-                    "role": "admin"
+                    "role": "user"
                 }
             }
             self._save_users(default_users)
@@ -181,6 +181,12 @@ def login_page() -> bool:
     """Display login page and return True if login successful."""
     st.title("🔐 Login to Personal Money Dashboard")
     st.markdown("Please enter your credentials to access the dashboard.")
+    
+    # Show default credentials for easy access
+    with st.expander("Default Credentials (Click to show)"):
+        st.markdown("**Username:** `user1`")
+        st.markdown("**Password:** `test1pw`")
+        st.info("These are demo credentials for easy access. You can register new accounts or change passwords later.")
     
     # Check if user is already logged in
     if st.session_state.current_user:

@@ -15,7 +15,6 @@ import streamlit as st
 
 import config
 import utils
-import auth
 from modules import (
     home,
     profit_loss,
@@ -121,13 +120,6 @@ def main() -> None:
         unsafe_allow_html=True,
     )
     utils.apply_custom_css()
-    
-    # Check authentication first
-    if not auth.main_auth():
-        return  # Stop here if not authenticated
-    
-    # Show user menu in sidebar
-    auth.show_user_menu()
     
     selected_page = create_sidebar_navigation()
     if selected_page:
